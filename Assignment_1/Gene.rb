@@ -1,6 +1,7 @@
+require './functions.rb'
 
 class Gene
-#
+
     attr_accessor :gene_ID  
     attr_accessor :name
     attr_accessor :mutant_phenotype
@@ -18,6 +19,22 @@ class Gene
     
     def self.total_genes
       return @@number_of_genes
+    end
+    
+    def self.insert_data(data)
+        
+        data_array = []
+        j = 0
+        my_csv=read_csv(data)
+        for row in my_csv
+          data_array[j] = Gene.new(
+            :gene_ID => row[0], 
+            :name => row[1], 
+            :mutant_phenotype => row[2] 
+            )
+          j += 1
+        end
+        return data_array
     end
 end
 

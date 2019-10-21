@@ -7,22 +7,22 @@ def read_csv (path, header = true, sep = "\t")
   return my_csv
 end
 
-def insert_data_in_class(csv, my_class, attributes)
-  
-  objects = []
-  j = 0
-  k = 0
-  my_csv=read_csv(csv)
-  
-  for row in my_csv
-    for i in attributes
-      objects[j] = my_class.new(:attributes[i] => row[k])
-      k +=1
-    end
-    j += 1
-  end
-end
-#
+#def insert_data_in_class(csv, my_class, attributes)
+#  
+#  objects = []
+#  j = 0
+#  k = 0
+#  my_csv=read_csv(csv)
+#  
+#  for row in my_csv
+#    for i in attributes
+#      objects[j] = my_class.new(attributes[i] => row[k])
+#      k +=1
+#    end
+#    j += 1
+#  end
+#end
+##
 #def insert_data_in_class(csv, my_class)
 #  
 #  objects = []
