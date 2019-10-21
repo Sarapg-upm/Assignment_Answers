@@ -7,15 +7,11 @@ class Gene
     
     @@number_of_genes = 0 #class variable, it is shared within the class
     
-    def initialize (
-        thisID = "00000000", 
-        thisname = "gen0", 
-        thisMutPhenotype = "phenotype0" 
-    ) # get a name from the "new" call, or set a default
+    def initialize (parms = {}) # get a name from the "new" call, or set a default
       
-      @gene_ID = thisID
-      @name = thisname
-      @mutant_phenotype = thisMutPhenotype
+      @gene_ID = parms.fetch(:gene_ID, "00000")
+      @name = parms.fetch(:name, "gene0")
+      @mutant_phenotype = parms.fetch(:mutant_phenotype, "blah blah some phenotype")
       
       @@number_of_genes += 1
     end
