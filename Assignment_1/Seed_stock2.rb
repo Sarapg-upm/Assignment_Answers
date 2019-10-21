@@ -13,13 +13,19 @@ include ObjectSpace
     
     @@number_of_stocks = 0 #class variable, it is shared within the class
     
-    def initialize (parms = {}) # get a name from the "new" call, or set a default
+    def initialize (
+        thisID = "00000000", 
+        thisname = "storage0", 
+        thislast_planted = "date",
+        thisstorage = "cama0",
+        thisgrams_remaining = 3
+      ) # get a name from the "new" call, or set a default
       
-      @mutant_gene_ID = parms.fetch(:mutant_gene_ID, "000000")
-      @seed_stock = parms.fetch(:seed_stock, "storage0")
-      @last_planted = parms.fetch(:last_planted, "date")
-      @storage = parms.fetch(:storage, "cama0")
-      @grams_remaining = parms.fetch(:grams_remaining, 3)
+      @mutant_gene_ID = thisID
+      @seed_stock = thisname
+      @last_planted = thislast_planted
+      @storage = thisstorage
+      @grams_remaining = thisgrams_remaining
       
       @@number_of_stocks += 1
     end
