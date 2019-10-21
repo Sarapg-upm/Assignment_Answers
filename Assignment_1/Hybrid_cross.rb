@@ -1,3 +1,5 @@
+require './functions.rb'
+
 class Hybrid_cross
 
     attr_accessor :parent1  
@@ -16,6 +18,25 @@ class Hybrid_cross
       @F2_P2 = parms.fetch(:F2_P2, 0)
       @F2_P2 = parms.fetch(:F2_P2, 0)
       
+    end
+    
+    def self.insert_data(data)
+        
+        data_array = []
+        j = 0
+        my_csv=read_csv(data)
+        for row in my_csv
+          data_array[j] = Hybrid_cross.new(
+            :parent1 => row[0], 
+            :parent2 => row[1], 
+            :F2_wild => row[2],
+            :F2_P1 => row[3],
+            :F2_P2 => row[4],
+            :F2_P1P2 => row[5]
+            )
+          j += 1
+        end
+        return data_array
     end
 end
 

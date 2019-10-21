@@ -1,7 +1,7 @@
+require './functions.rb'
+
 class Seed_stock
 
-include ObjectSpace
-  
     attr_accessor :mutant_gene_ID  
     attr_accessor :seed_stock
     attr_accessor :last_planted
@@ -25,13 +25,22 @@ include ObjectSpace
       return @@number_of_stocks
     end
     
-    def self.all
-      ObjectSpace.each_object(self).to_a
-    end
-
-    
-    def self.count
-      ObjectSpace.each_object(self).count
+    def self.insert_data(data)
+        
+        data_array = []
+        j = 0
+        my_csv=read_csv(data)
+        for row in my_csv
+          data_array[j] = Seed_stock.new(
+            :mutant_gene_ID => row[0], 
+            :seed_stock => row[1], 
+            :last_planted => row[2],
+            :storage => row[3],
+            :grams_remaining => row[4] 
+            )
+          j += 1
+        end
+        return data_array
     end
 end
 
