@@ -20,3 +20,5 @@ puts Gene.total_genes
 puts "Total stocks"
 puts Seed_stock.total_stocks
 
+
+
