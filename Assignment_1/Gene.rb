@@ -23,16 +23,14 @@ class Gene
     
     def self.insert_data(data)
         
-        data_array = []
-        j = 0
+        data_array = Array.new
         my_csv=read_csv(data)
         for row in my_csv
-          data_array[j] = Gene.new(
+          data_array << Gene.new(
             :gene_ID => row[0], 
             :name => row[1], 
             :mutant_phenotype => row[2] 
             )
-          j += 1
         end
         return data_array
     end
