@@ -8,8 +8,8 @@ def read_csv (path, header = true, sep = "\t")
   return my_csv
 end
 
-def write_csv(path, row, sep = "\t")
-  csv = CSV.open(path, "a+", :col_sep => sep)
+def write_csv(path, row, sep = "\t", header)
+  csv = CSV.open(path, "a+", :write_headers=> true, :headers => header, :col_sep => sep)
   csv << row
 end
 
