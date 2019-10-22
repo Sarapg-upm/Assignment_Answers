@@ -13,6 +13,7 @@ class Seed_stock
     attr_accessor :grams_remaining
     
     @@number_of_stocks = 0 #class variable, it is shared within the class
+    @@my_new_stock = Array.new
     
     def initialize (parms = {}) # get a name from the "new" call, or set a default
       
@@ -52,13 +53,16 @@ class Seed_stock
         if  @grams_remaining < 0
             @grams_remaining = 0
         end
-        
         row = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
-        header = ["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
-        
-        write_csv('./new_stock_file.tsv', row, "\t", header)
+        @@my_new_stock << row
     end
+    
+    def self.update_new_stock(path)
+        
+        header = ["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
+        write_csv('./new_stock_file.tsv', @@my_new_stock, "\t", header)
 
+    end
 end
 
 # =====================================================================================

@@ -14,6 +14,14 @@ genes2 = Gene.insert_data("./gene_information.tsv")
 #puts genes2[1].gene_ID,genes2[1].name,genes2[1].mutant_phenotype
 
 my_seed_stock = Seed_stock.insert_data("./seed_stock_data.tsv")
+
+path = './new_stock_file.tsv'
+
+#puts CSV.read(path)
+#if CSV.read(path)
+#    FileUtils.rm(path)
+#end
+
 for object in my_seed_stock
   #puts i.mutant_gene_ID,i.seed_stock,i.last_planted,i.grams_remaining
   puts object.seed_stock, object.grams_remaining
@@ -22,10 +30,9 @@ for object in my_seed_stock
   
   puts object.seed_stock, object.grams_remaining
   
-  
 end
 
-
+Seed_stock.update_new_stock(path)
 #puts genes2[1].mutant_gene_ID,genes2[1].seed_stock,genes2[1].last_planted
 
 genes2 = Hybrid_cross.insert_data("./cross_data.tsv")
