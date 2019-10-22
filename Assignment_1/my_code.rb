@@ -17,6 +17,7 @@ my_seed_stock = Seed_stock.insert_data("./seed_stock_data.tsv")
 for object in my_seed_stock
   #puts i.mutant_gene_ID,i.seed_stock,i.last_planted,i.grams_remaining
   puts object.seed_stock, object.grams_remaining
+  
   object.plant_seed(7)
   
   puts object.seed_stock, object.grams_remaining
@@ -36,7 +37,4 @@ genes2 = Hybrid_cross.insert_data("./cross_data.tsv")
 #
 #puts "Total stocks"
 #puts Seed_stock.total_stocks
-
-puts Seed_stock.methods
-
 

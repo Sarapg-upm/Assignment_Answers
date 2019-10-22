@@ -8,8 +8,9 @@ def read_csv (path, header = true, sep = "\t")
   return my_csv
 end
 
-def write_csv(path, header, sep = "\t")
-  my_csv = CSV.open (path)
+def write_csv(path, row, sep = "\t")
+  csv = CSV.open(path, "a+", :col_sep => sep)
+  csv << row
 end
 
 def is_datetime(d)
