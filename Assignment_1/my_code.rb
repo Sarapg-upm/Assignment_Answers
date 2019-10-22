@@ -5,7 +5,7 @@ require './functions.rb'
 
 
 
-genes2 = Gene.insert_data("./gene_information.tsv")
+#genes2 = Gene.insert_data("./gene_information.tsv")
 
 my_seed_stock = Seed_stock.insert_data("./seed_stock_data.tsv")
 
@@ -17,4 +17,8 @@ end
 
 Seed_stock.update_new_stock(my_seed_stock, path)
 
-genes2 = Hybrid_cross.insert_data("./cross_data.tsv")
+hybrid_cross_objects = Hybrid_cross.insert_data("./cross_data.tsv")
+
+for object in hybrid_cross_objects
+  object.chi_square
+end

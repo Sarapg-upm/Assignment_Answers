@@ -16,6 +16,12 @@ def write_csv(path, data, sep = "\t", header)
   end
 end
 
+def chi_square(samples)
+
+
+
+end
+
 def is_datetime(d)
   d.methods.include? :strftime
 end
