@@ -1,7 +1,10 @@
 require './functions.rb'
+require 'forwardable'
 
 class Seed_stock
-
+    
+    include Enumerable
+    extend Forwardable
     
     attr_accessor :seed_stock  
     attr_accessor :mutant_gene_ID
@@ -49,11 +52,13 @@ class Seed_stock
         if  @grams_remaining < 0
             @grams_remaining = 0
         end
+        
+        row = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
+        #["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
+        
+        write_csv('./new_stock_file.tsv', row, "\t")
     end
-    
-    def self.save_updated_stock
-        puts Seed_stock.
-    end
+
 end
 
 # =====================================================================================
