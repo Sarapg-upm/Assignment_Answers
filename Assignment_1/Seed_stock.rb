@@ -1,5 +1,4 @@
 require './functions.rb'
-require 'forwardable'
 
 class Seed_stock
     
@@ -53,16 +52,25 @@ class Seed_stock
         if  @grams_remaining < 0
             @grams_remaining = 0
         end
-        row = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
-        @@my_new_stock << row
+
     end
     
-    def self.update_new_stock(path)
+    def get_data
+        row = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
+        @@my_new_stock << row   
+    end
+    
+    def self.update_new_stock(my_seed_stock, path)
+        
+        for object in my_seed_stock
+          object.get_data
+        end
         
         header = ["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
         write_csv('./new_stock_file.tsv', @@my_new_stock, "\t", header)
-
+        @@my_new_stock = Array.new
     end
+    
 end
 
 # =====================================================================================
