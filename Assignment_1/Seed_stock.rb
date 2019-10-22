@@ -54,9 +54,9 @@ class Seed_stock
         end
         
         row = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
-        #["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
+        header = ["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
         
-        write_csv('./new_stock_file.tsv', row, "\t")
+        write_csv('./new_stock_file.tsv', row, "\t", header)
     end
 
 end
