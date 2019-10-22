@@ -14,11 +14,7 @@ path = './new_stock_file.tsv'
 for object in my_seed_stock
   object.plant_seed(7)
 end
-for object in my_seed_stock
-  object.plant_seed(3)
-end
 
 Seed_stock.update_new_stock(my_seed_stock, path)
 
 genes2 = Hybrid_cross.insert_data("./cross_data.tsv")
-
