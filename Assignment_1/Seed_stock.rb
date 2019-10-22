@@ -12,7 +12,7 @@ class Seed_stock
     attr_accessor :grams_remaining
     
     @@number_of_stocks = 0 #class variable, it is shared within the class
-    @@my_new_stock = Array.new
+    @@my_seed_stock = Array.new
     
     def initialize (parms = {}) # get a name from the "new" call, or set a default
       
@@ -56,19 +56,19 @@ class Seed_stock
     end
     
     def get_data
-        row = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
-        @@my_new_stock << row   
+        object_data = [@seed_stock, @mutant_gene_ID, @last_planted, @storage, @grams_remaining]
+        return object_data
     end
     
     def self.update_new_stock(my_seed_stock, path)
         
         for object in my_seed_stock
-          object.get_data
+          @@my_seed_stock << object.get_data
         end
         
         header = ["Seed_Stock", "Mutant_Gene_ID", "Last_Planted", "Storage", "Grams_Remaining"]
-        write_csv('./new_stock_file.tsv', @@my_new_stock, "\t", header)
-        @@my_new_stock = Array.new
+        write_csv('./new_stock_file.tsv', @@my_seed_stock, "\t", header)
+        @@my_seed_stock = Array.new
     end
     
 end
