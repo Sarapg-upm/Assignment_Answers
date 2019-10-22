@@ -1,10 +1,10 @@
 require './functions.rb'
-require './Gene.rb'
 
 class Seed_stock
 
-    #attr_accessor :mutant_gene_ID  
-    attr_accessor :seed_stock
+    
+    attr_accessor :seed_stock  
+    attr_accessor :mutant_gene_ID
     attr_accessor :last_planted
     attr_accessor :storage
     attr_accessor :grams_remaining
@@ -13,7 +13,7 @@ class Seed_stock
     
     def initialize (parms = {}) # get a name from the "new" call, or set a default
       
-      @mutant_gene_ID = parms.fetch(Gene.gene_ID, "000000")
+      @mutant_gene_ID = parms.fetch(:mutant_gene_ID, "000000")
       @seed_stock = parms.fetch(:seed_stock, "storage0")
       @last_planted = parms.fetch(:last_planted, "date")
       @storage = parms.fetch(:storage, "cama0")
@@ -32,14 +32,27 @@ class Seed_stock
         my_csv=read_csv(data)
         for row in my_csv
           data_array << Seed_stock.new(
-            :mutant_gene_ID => row[0], 
-            :seed_stock => row[1], 
+            :seed_stock => row[0], 
+            :mutant_gene_ID => row[1], 
             :last_planted => row[2],
             :storage => row[3],
-            :grams_remaining => row[4] 
+            :grams_remaining => row[4].to_i 
             )
         end
         return data_array
+    end
+    
+    def plant_seed(grams_planted)
+        
+        @grams_remaining -= grams_planted
+        
+        if  @grams_remaining < 0
+            @grams_remaining = 0
+        end
+    end
+    
+    def self.save_updated_stock
+        puts Seed_stock.
     end
 end
 

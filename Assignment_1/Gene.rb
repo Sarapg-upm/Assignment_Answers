@@ -34,5 +34,7 @@ class Gene
         end
         return data_array
     end
+    
+    
 end
 

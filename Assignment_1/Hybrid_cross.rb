@@ -1,5 +1,5 @@
 require './functions.rb'
-require './Seed_stock.rb'
+
 
 class Hybrid_cross
 
