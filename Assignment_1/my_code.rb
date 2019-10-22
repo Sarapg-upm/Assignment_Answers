@@ -21,6 +21,8 @@ for object in my_seed_stock
   object.plant_seed(7)
   
   puts object.seed_stock, object.grams_remaining
+  
+  
 end
 
 
