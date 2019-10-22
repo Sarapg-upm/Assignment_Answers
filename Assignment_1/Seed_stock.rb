@@ -52,7 +52,6 @@ class Seed_stock
         if  @grams_remaining < 0
             @grams_remaining = 0
         end
-
     end
     
     def get_data
