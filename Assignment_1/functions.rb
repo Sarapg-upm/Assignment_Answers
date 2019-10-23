@@ -1,5 +1,5 @@
 require 'csv'
-require 'date'
+
 
 
 def read_csv (path, header = true, sep = "\t")
@@ -15,14 +15,3 @@ def write_csv(path, data, sep = "\t", header)
     csv << row
   end
 end
-
-def chi_square(samples)
-
-
-
-end
-
-def is_datetime(d)
-  d.methods.include? :strftime
-end
-

@@ -57,7 +57,11 @@ class Hybrid_cross < Seed_stock
             #name = self.get_gene_data
             #puts name
             puts "Recording:  #{self.get_gene_HYBRID(self.parent1)} is genetically linked to #{self.get_gene_HYBRID(self.parent2)} with chisquare score #{observed_expected}"
+            puts
+            puts "Final Report:\n#{self.get_gene_HYBRID(self.parent1)} is linked to #{self.get_gene_HYBRID(self.parent2)}\n#{self.get_gene_HYBRID(self.parent2)} is linked to #{self.get_gene_HYBRID(self.parent1)}"
+            
             @linked_genes = true
+            
         end
     end
     
