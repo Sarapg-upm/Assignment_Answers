@@ -51,7 +51,7 @@ class Seed_stock < Gene
         
         if  @grams_remaining <= 0
             @grams_remaining = 0
-            puts "WARNING: we have run out of Seed Stock #{self.seed_stock}!"
+            puts "\nWARNING: we have run out of Seed Stock #{self.seed_stock}!"
         end
     end
     
@@ -71,28 +71,6 @@ class Seed_stock < Gene
         @@my_seed_stock = Array.new
     end
     
-    #def get_gene_name(id)
-    #    super
-    #end
-    
-    #def get_gene_id(id)
-    #    
-    #    for object in @@data_array
-    #        if object.seed_stock == id 
-    #            return object.mutant_gene_ID
-    #        end
-    #    end
-    #end
-    
-    #def get_gene_name(id)
-    #    
-    #    for object in @@data_genes
-    #        if object.gene_ID == id 
-    #            return object.name
-    #        end
-    #    end
-    #end
-    #
 end
 
 # =====================================================================================

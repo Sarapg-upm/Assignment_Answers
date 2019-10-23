@@ -65,23 +65,6 @@ class Hybrid_cross < Seed_stock
         end
     end
     
-    #def get_gene_name(id)
-    #    super
-    #end
-    
-    #def get_gene_id(id)
-    #    super
-    #end
-    
-    #def get_gene_HYBRID(id)
-    #    
-    #    for object in @@data_seed_stock
-    #        if object.seed_stock == id
-    #            self.get_gene_name(object.mutant_gene_ID)
-    #        end
-    #    end
-    #end
-    
     def get_gene_HYBRID(id)
         
         for object in @@data_seed_stock
