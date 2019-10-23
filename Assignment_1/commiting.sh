@@ -1,5 +1,5 @@
 #!/bin/bash
 
 git add -A
-git commit -m "commiting"
+git commit -m "Final code"
 git push

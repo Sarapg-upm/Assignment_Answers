@@ -1,6 +1,6 @@
 require './functions.rb'
 
-class Gene
+class Gene 
 
     attr_accessor :gene_ID  
     attr_accessor :name
@@ -23,18 +23,30 @@ class Gene
     
     def self.insert_data(data)
         
-        data_array = Array.new
+        @@data_genes = Array.new
         my_csv=read_csv(data)
         for row in my_csv
-          data_array << Gene.new(
+          @@data_genes << Gene.new(
             :gene_ID => row[0], 
             :name => row[1], 
             :mutant_phenotype => row[2] 
             )
         end
-        return data_array
+        return @@data_genes
     end
     
+    def say(message)
+        puts message
+    end
+    
+    #def get_gene_name(id)
+    #    
+    #    for object in @@data_array
+    #        if object.gene_ID == id 
+    #            return object.name
+    #        end
+    #    end
+    #end
     
 end
 
