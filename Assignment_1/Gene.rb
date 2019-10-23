@@ -35,9 +35,5 @@ class Gene
         return @@data_genes
     end
     
-    def say(message)
-        puts message
-    end
-    
 end
 
