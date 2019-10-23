@@ -49,7 +49,7 @@ class Seed_stock < Gene
         
         @grams_remaining -= grams_planted
         
-        if  @grams_remaining < 0
+        if  @grams_remaining <= 0
             @grams_remaining = 0
             puts "WARNING: we have run out of Seed Stock #{self.seed_stock}!"
         end
