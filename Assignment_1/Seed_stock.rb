@@ -1,6 +1,6 @@
 require './functions.rb'
 
-class Seed_stock
+class Seed_stock < Gene
     
     include Enumerable
     extend Forwardable
@@ -31,10 +31,10 @@ class Seed_stock
     
     def self.insert_data(data)
         
-        data_array = Array.new
+        @@data_seed_stock = Array.new
         my_csv=read_csv(data)
         for row in my_csv
-          data_array << Seed_stock.new(
+          @@data_seed_stock << Seed_stock.new(
             :seed_stock => row[0], 
             :mutant_gene_ID => row[1], 
             :last_planted => row[2],
@@ -42,7 +42,7 @@ class Seed_stock
             :grams_remaining => row[4].to_i 
             )
         end
-        return data_array
+        return @@data_seed_stock
     end
     
     def plant_seed(grams_planted)
@@ -70,6 +70,28 @@ class Seed_stock
         @@my_seed_stock = Array.new
     end
     
+    #def get_gene_name(id)
+    #    super
+    #end
+    
+    #def get_gene_id(id)
+    #    
+    #    for object in @@data_array
+    #        if object.seed_stock == id 
+    #            return object.mutant_gene_ID
+    #        end
+    #    end
+    #end
+    
+    #def get_gene_name(id)
+    #    
+    #    for object in @@data_genes
+    #        if object.gene_ID == id 
+    #            return object.name
+    #        end
+    #    end
+    #end
+    #
 end
 
 # =====================================================================================
