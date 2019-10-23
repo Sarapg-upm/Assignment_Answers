@@ -39,14 +39,5 @@ class Gene
         puts message
     end
     
-    #def get_gene_name(id)
-    #    
-    #    for object in @@data_array
-    #        if object.gene_ID == id 
-    #            return object.name
-    #        end
-    #    end
-    #end
-    
 end
 
