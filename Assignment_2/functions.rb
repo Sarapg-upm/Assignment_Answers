@@ -35,4 +35,14 @@ def fetch(url)
     url: url.to_s})
   return response
 
-end 
+end
+
+def mesh=(code)
+  meshcode = Regexp.new(/AT\dG\d{0,5}/i)
+  if meshcode.match(code)
+    @mesh = code
+  else
+    puts "This is not a valid mesh code - settting to 000000"
+    @mesh = "0000000"
+  end
+end
