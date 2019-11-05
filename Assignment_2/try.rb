@@ -42,11 +42,22 @@ interactors.uniq!
 
 for code in interactors
   kegg_gene = "http://togows.org/entry/kegg-genes/ath:#{code}.json"
+  GO_query = "http://togows.dbcls.jp/entry/uniprot/#{code}/dr.json" 
+  
   res = fetch(kegg_gene)
   data = JSON.parse(res.body)
   
+  res2 = fetch(GO_query)
+  data_GO = JSON.parse(res2.body)
+  
+  puts "This code #{code}"
   for elem in data[0]["pathways"].each
   #   puts elem
-    puts "KEGG_Pathway ID: #{elem[0]}  name: #{elem[1]}"
+    puts "\tKEGG_Pathway ID: #{elem[0]}  name: #{elem[1]}"
+  end
+  for go in data_GO[0]["GO"]
+    if (go[1]=~ /^P:/)
+      puts "GO_ID:#{go[0]}\tname: #{go[1]}"
+    end
   end
 end
