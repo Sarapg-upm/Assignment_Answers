@@ -1,0 +1,674 @@
+Original code:
+AT4G27030
+Interactors:
+[]
+Original code:
+AT5G54270
+Interactors:
+[]
+Original code:
+AT1G21400
+Interactors:
+[]
+Original code:
+AT5G19120
+Interactors:
+[]
+Original code:
+AT2G13360
+Interactors:
+[]
+Original code:
+AT4G05180
+Interactors:
+[]
+Original code:
+AT1G22690
+Interactors:
+[]
+Original code:
+AT2G45170
+Interactors:
+[]
+Original code:
+AT4G09650
+Interactors:
+[]
+Original code:
+AT5G55620
+Interactors:
+[]
+Original code:
+AT1G31330
+Interactors:
+[]
+Original code:
+AT1G80440
+Interactors:
+[]
+Original code:
+AT3G28270
+Interactors:
+[]
+Original code:
+AT4G12800
+Interactors:
+[]
+Original code:
+AT5G04140
+Interactors:
+[]
+Original code:
+AT5G64040
+Interactors:
+[]
+Original code:
+AT1G29660
+Interactors:
+[]
+Original code:
+AT1G15820
+Interactors:
+[]
+Original code:
+AT1G64500
+Interactors:
+[]
+Original code:
+AT1G03130
+Interactors:
+[]
+Original code:
+AT2G20670
+Interactors:
+[]
+Original code:
+AT4G17090
+Interactors:
+[]
+Original code:
+AT1G23740
+Interactors:
+[]
+Original code:
+AT2G46340
+Interactors:
+[]
+Original code:
+AT4G17460
+Interactors:
+[]
+Original code:
+AT1G07010
+Interactors:
+[]
+Original code:
+AT1G32220
+Interactors:
+[]
+Original code:
+AT2G03750
+Interactors:
+[]
+Original code:
+AT3G47470
+Interactors:
+[]
+Original code:
+AT4G12830
+Interactors:
+[]
+Original code:
+AT5G05690
+Interactors:
+[]
+Original code:
+AT5G64410
+Interactors:
+[]
+Original code:
+AT2G21330
+Interactors:
+[]
+Original code:
+AT1G15980
+Interactors:
+[]
+Original code:
+AT2G01890
+Interactors:
+[]
+Original code:
+AT1G12250
+Interactors:
+[]
+Original code:
+AT2G21210
+Interactors:
+[]
+Original code:
+AT4G28660
+Interactors:
+[]
+Original code:
+AT1G52230
+Interactors:
+[]
+Original code:
+AT3G18890
+Interactors:
+[]
+Original code:
+AT4G22890
+Interactors:
+["AT1G20020", "AT4G02770"]
+Original code:
+AT1G11850
+Interactors:
+[]
+Original code:
+AT1G37130
+Interactors:
+[]
+Original code:
+AT2G04039
+Interactors:
+[]
+Original code:
+AT3G48420
+Interactors:
+[]
+Original code:
+AT4G19170
+Interactors:
+[]
+Original code:
+AT5G07020
+Interactors:
+[]
+Original code:
+AT5G65010
+Interactors:
+[]
+Original code:
+AT3G01500
+Interactors:
+[]
+Original code:
+AT1G25230
+Interactors:
+[]
+Original code:
+AT2G34430
+Interactors:
+[]
+Original code:
+AT1G18060
+Interactors:
+[]
+Original code:
+AT2G30600
+Interactors:
+[]
+Original code:
+AT4G33010
+Interactors:
+[]
+Original code:
+AT1G65490
+Interactors:
+[]
+Original code:
+AT3G21670
+Interactors:
+[]
+Original code:
+AT4G27260
+Interactors:
+[]
+Original code:
+AT1G12780
+Interactors:
+[]
+Original code:
+AT1G55480
+Interactors:
+[]
+Original code:
+AT2G17880
+Interactors:
+[]
+Original code:
+AT3G49160
+Interactors:
+[]
+Original code:
+AT4G21210
+Interactors:
+[]
+Original code:
+AT5G14740
+Interactors:
+[]
+Original code:
+AT4G37980
+Interactors:
+[]
+Original code:
+AT1G29395
+Interactors:
+[]
+Original code:
+AT2G39730
+Interactors:
+[]
+Original code:
+AT1G20020
+Interactors:
+["AT4G22890"]
+Original code:
+AT2G34420
+Interactors:
+[]
+Original code:
+AT4G37800
+Interactors:
+[]
+Original code:
+AT1G70820
+Interactors:
+[]
+Original code:
+AT3G26740
+Interactors:
+[]
+Original code:
+AT4G28780
+Interactors:
+[]
+Original code:
+AT1G12900
+Interactors:
+[]
+Original code:
+AT1G64680
+Interactors:
+[]
+Original code:
+AT2G25200
+Interactors:
+[]
+Original code:
+AT3G55800
+Interactors:
+[]
+Original code:
+AT4G21280
+Interactors:
+[]
+Original code:
+AT5G15850
+Interactors:
+["AT2G46340"]
+Original code:
+AT1G06680
+Interactors:
+[]
+Original code:
+AT2G43550
+Interactors:
+[]
+Original code:
+AT3G02730
+Interactors:
+[]
+Original code:
+AT1G42970
+Interactors:
+[]
+Original code:
+AT2G39470
+Interactors:
+[]
+Original code:
+AT5G17300
+Interactors:
+[]
+Original code:
+AT1G77490
+Interactors:
+[]
+Original code:
+AT3G27690
+Interactors:
+[]
+Original code:
+AT5G01015
+Interactors:
+[]
+Original code:
+AT1G14150
+Interactors:
+[]
+Original code:
+AT1G64720
+Interactors:
+[]
+Original code:
+AT2G26080
+Interactors:
+[]
+Original code:
+AT3G56940
+Interactors:
+[]
+Original code:
+AT4G28030
+Interactors:
+[]
+Original code:
+AT5G20250
+Interactors:
+[]
+Original code:
+AT1G54040
+Interactors:
+[]
+Original code:
+AT3G21870
+Interactors:
+[]
+Original code:
+AT3G48360
+Interactors:
+[]
+Original code:
+AT1G61520
+Interactors:
+[]
+Original code:
+AT2G43010
+Interactors:
+[]
+Original code:
+AT5G22920
+Interactors:
+[]
+Original code:
+AT1G78370
+Interactors:
+[]
+Original code:
+AT3G28220
+Interactors:
+[]
+Original code:
+AT5G11070
+Interactors:
+[]
+Original code:
+AT1G23205
+Interactors:
+[]
+Original code:
+AT1G68010
+Interactors:
+[]
+Original code:
+AT2G26740
+Interactors:
+[]
+Original code:
+AT3G61470
+Interactors:
+[]
+Original code:
+AT4G28750
+Interactors:
+[]
+Original code:
+AT5G24210
+Interactors:
+[]
+Original code:
+AT1G71030
+Interactors:
+[]
+Original code:
+AT3G54050
+Interactors:
+[]
+Original code:
+AT3G54890
+Interactors:
+[]
+Original code:
+AT1G72610
+Interactors:
+[]
+Original code:
+AT3G08940
+Interactors:
+[]
+Original code:
+AT5G62280
+Interactors:
+[]
+Original code:
+AT2G18700
+Interactors:
+[]
+Original code:
+AT3G45780
+Interactors:
+[]
+Original code:
+AT5G18670
+Interactors:
+[]
+Original code:
+AT1G28330
+Interactors:
+[]
+Original code:
+AT1G68570
+Interactors:
+[]
+Original code:
+AT2G30950
+Interactors:
+[]
+Original code:
+AT3G62410
+Interactors:
+[]
+Original code:
+AT4G33660
+Interactors:
+[]
+Original code:
+AT5G35170
+Interactors:
+[]
+Original code:
+AT3G16250
+Interactors:
+[]
+Original code:
+AT1G09340
+Interactors:
+[]
+Original code:
+AT3G63140
+Interactors:
+[]
+Original code:
+AT1G76080
+Interactors:
+[]
+Original code:
+AT3G46780
+Interactors:
+[]
+Original code:
+AT1G02640
+Interactors:
+[]
+Original code:
+AT2G33830
+Interactors:
+[]
+Original code:
+AT3G47340
+Interactors:
+[]
+Original code:
+AT5G35630
+Interactors:
+[]
+Original code:
+AT1G29910
+Interactors:
+["AT1G29920"]
+Original code:
+AT1G69870
+Interactors:
+[]
+Original code:
+AT2G47930
+Interactors:
+[]
+Original code:
+AT4G02530
+Interactors:
+[]
+Original code:
+AT4G38840
+Interactors:
+[]
+Original code:
+AT5G43750
+Interactors:
+[]
+Original code:
+AT3G50820
+Interactors:
+[]
+Original code:
+AT1G13930
+Interactors:
+[]
+Original code:
+AT4G37610
+Interactors:
+[]
+Original code:
+AT1G76100
+Interactors:
+[]
+Original code:
+AT3G61260
+Interactors:
+[]
+Original code:
+AT1G08380
+Interactors:
+[]
+Original code:
+AT2G38210
+Interactors:
+[]
+Original code:
+AT4G04640
+Interactors:
+[]
+Original code:
+AT5G38990
+Interactors:
+[]
+Original code:
+AT1G29920
+Interactors:
+["AT1G29910"]
+Original code:
+AT1G74730
+Interactors:
+[]
+Original code:
+AT3G05730
+Interactors:
+[]
+Original code:
+AT4G02770
+Interactors:
+["AT4G22890"]
+Original code:
+AT4G39710
+Interactors:
+[]
+Original code:
+AT5G48300
+Interactors:
+[]
+Original code:
+AT5G48490
+Interactors:
+[]
+Original code:
+AT1G20440
+Interactors:
+[]
+Original code:
+AT5G02160
+Interactors:
+[]
+Original code:
+AT2G05540
+Interactors:
+[]
+Original code:
+AT3G62550
+Interactors:
+[]
+Original code:
+AT1G14280
+Interactors:
+[]
+Original code:
+AT2G43100
+Interactors:
+[]
+Original code:
+AT4G09010
+Interactors:
+[]
+Original code:
+AT5G49360
+Interactors:
+[]
+Original code:
+AT1G30380
+Interactors:
+[]
+Original code:
+AT1G78460
+Interactors:
+[]
+Original code:
+AT3G16140
+Interactors:
+[]
+Original code:
+AT4G12310
+Interactors:
+[]
+Original code:
+AT5G01530
+Interactors:
+[]
+Original code:
+AT5G58260
+Interactors:
+[]
+0
+0
