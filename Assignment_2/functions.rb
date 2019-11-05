@@ -46,3 +46,10 @@ def mesh=(code)
     @mesh = "0000000"
   end
 end
+
+def uppercase(array)
+  for i in array
+    i.upcase!
+  end
+  return array
+end
