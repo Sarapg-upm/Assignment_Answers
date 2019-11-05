@@ -20,10 +20,10 @@ class AT_Gene
         @@data_genes = Array.new
         my_csv=read_csv(data)
         for row in my_csv
-          @@data_genes << Gene.new(
-            :gene_ID => row[0], 
-            :name => row[1], 
-            :mutant_phenotype => row[2] 
+          @@data_genes << AT_Gene.new(
+            :TAIR_ID => row[0], 
+            :KEGG_ID => KEGG_Pathway, 
+            :GO_ID => GO 
             )
         end
         return @@data_genes
