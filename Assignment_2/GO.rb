@@ -8,7 +8,7 @@ class GO
     def initialize (parms = {}) # get a name from the "new" call, or set a default
       
       @GO_ID = parms.fetch(:GO_ID, "GO:000000")
-      @name= parms.fetch(:name, "Some ontology name name")
+      @name= parms.fetch(:name, "Some ontology name")
     end
     
     def self.insert_data(data)
