@@ -7,7 +7,6 @@ require 'csv'
 # @return [Array] An array of columns (also as arrays).
 def read_csv(path, header = true, sep = "\t")
   my_csv = CSV.read(path, headers: header,  :col_sep => sep)
-  
   return my_csv
 end
 
@@ -26,8 +25,7 @@ end
 
 # Access the Web and get the file given an addres
 # @param url [String] The address in which the file can be found at the Web.
-# @return response.body [File] the file body found at he addres.
-# @return false [Boolean] if there file response.body was not found.
+# @return response [File] the file body found at he addres.
 def fetch(url)
   response = RestClient::Request.execute({
     method: :get,
@@ -36,7 +34,9 @@ def fetch(url)
 
 end
 
-
+# Given an array with strings, it transforms all af the elements to uppercase
+# @param array [Array] The array with the strings
+# @return array [Array] the same array with the uppercase elements.
 def uppercase(array)
   for elem in array
     elem.upcase!
