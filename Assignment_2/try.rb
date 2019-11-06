@@ -3,14 +3,20 @@ require './functions.rb'
 require 'ruby-progressbar'
 require 'json'
 require './AT_Gene.rb'
-$VERBOSE=nil
 
-data = AT_Gene.insert_data('./target-codes.tsv')
-for object in data
-  puts object.TAIR_ID
-  print object.get_data
-  puts
+
+AT_Gene.insert_data('./target-codes.tsv')
+AT_Gene.get_report('./report.tsv')
+
+report = read_csv('./report.tsv')
+for row in report
+  print row
 end
+#for object in data
+#  puts object.TAIR_ID
+#  print object.get_data
+#  puts
+#end
 #
 ##my_codes = read_csv('./ArabidopsisSubNetwork_GeneList.txt', false, "\n").flatten!
 #
