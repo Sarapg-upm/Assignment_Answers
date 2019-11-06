@@ -1,6 +1,5 @@
 require 'csv'
 
-
 # Reads a csv file given a specific `path`
 # @param path [String] The path in which the file can be found.  
 # @param header [Boolean] If the csv has or not header. Boolean varaible set to `true` by default. 
@@ -37,19 +36,10 @@ def fetch(url)
 
 end
 
-def mesh=(code)
-  meshcode = Regexp.new(/AT\dG\d{0,5}/i)
-  if meshcode.match(code)
-    @mesh = code
-  else
-    puts "This is not a valid mesh code - settting to 000000"
-    @mesh = "0000000"
-  end
-end
 
 def uppercase(array)
-  for i in array
-    i.upcase!
+  for elem in array
+    elem.upcase!
   end
   return array
 end
