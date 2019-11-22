@@ -4,33 +4,41 @@ require 'net/http'   # this is how you access the Web
 require 'bio'  
 
 
-my_codes = read_csv('./ArabidopsisSubNetwork_GeneList.txt', false, "\n").flatten!
+my_codes = read_csv('./try_codes.txt', false, "\t").flatten!
 
 weird_codes = Array.new
 for code in my_codes
-  
-  address = URI("http://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=ensemblgenomesgene&format=embl&id=#{code}")  # create a "URI" object (Uniform Resource Identifier: https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
-  
-  response = Net::HTTP.get_response(address)  # use the Net::HTTP object "get_response" method
-                                               
-  record = response.body
-  
-  entry = Bio::EMBL.new(record)
-  puts entry.class
-  puts "The record is #{entry.definition} "
+
+  entry = fetch_embl(code)
+  puts code
+  #puts entry.accession
+  gene_sequence = entry.to_biosequence
+  #puts gene_sequence
   
   entry.features.each do |feature|
-  
-    position = feature.position
+
+    #position = feature.position
     #puts position
     #puts "\n\n\n\nPOSITION = #{position}"
-    ft = feature.feature            # feature.assoc gives you a hash of Bio::Feature::Qualifier objects 
+    #ft = feature.feature            # feature.assoc gives you a hash of Bio::Feature::Qualifier objects 
                                     # i.e. qualifier['key'] = value  for example qualifier['gene'] = "CYP450")
     #puts "Associations = #{qual}"
     # skips the entry if "/translation=" is not found
     #puts qual
-    next unless (ft == "exon" && (position =~ /[A-Z]/))  # this is an indication that the feature is a transcript
-    weird_codes += [code]
+    next unless (feature.feature == "exon" && (not feature.position =~ /[A-Z]/))  # this is an indication that the feature is a transcript
+    #print feature.qualifiers
+    feature.qualifiers.each{|q| (/exon_id=(.+)/.match(q.value)) ? ex_id=$1: ex_id = nil}
+    #puts ex_id
+    #next if ex_id.nil? || /[A-Z]/.match(feature.position) # We are only interested in exons from gene (not remote entries)
+    exon = gene_sequence.splicing(feature.position) #  If position of feature doesn't fit with gene sequence length, next feature
+    exon_in_gene = feature.locations()
+    print exon_in_gene.range()
+    puts
+    print exon_in_gene.first.strand
+    puts
+    print exon_in_gene.size
+    puts
+    #puts exon
     # collects gene name and so on and joins it into a string
     #gene_info = [
     #  qual['gene'], qual['product'], qual['note'], qual['function']

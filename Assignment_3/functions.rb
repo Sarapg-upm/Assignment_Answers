@@ -1,4 +1,6 @@
 require 'csv'
+require 'net/http'   # this is how you access the Web
+require 'bio'
 
 # Reads a csv file given a specific `path`
 # @param path [String] The path in which the file can be found.  
@@ -32,6 +34,14 @@ def fetch(url)
     url: url.to_s})
   return response
 
+end
+
+# Access the embl and get the file given an gene code
+# @param code [String] The gene code
+# @return entry [Object] BIO::EMBL object
+def fetch_embl(code)
+  entry = Bio::Fetch::EBI.query('ensemblgenomesgene', code, 'raw', 'embl')
+  return Bio::EMBL.new(entry)
 end
 
 # Given an array with strings, it transforms all af the elements to uppercase
