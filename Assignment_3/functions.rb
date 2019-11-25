@@ -53,3 +53,14 @@ def uppercase(array)
   end
   return array
 end
+
+# Given an EMBl entry, it extract the chormosome number, the start and end points of the enrty
+# @param entry [Bio::EMBL] The entry from the Bio:.Embl object
+# @return chromosone_number, entry_start, entry_end [Int]
+def get_info_gene_entry(entry)
+  chromosone_number, entry_start, entry_end = entry.accession.match(/.*:\w+\d+:(\d+):(\d+):(\d+)/).captures
+  #chromosone_number = match[:chromosome]
+  #entry_start = match[:start_chr].to_i
+  #entry_end = match[:end_chr].to_i
+  return chromosone_number, entry_start.to_i, entry_end.to_i
+end
