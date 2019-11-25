@@ -39,8 +39,8 @@ end
 # Access the embl and get the file given an gene code
 # @param code [String] The gene code
 # @return entry [Object] BIO::EMBL object
-def fetch_embl(code)
-  entry = Bio::Fetch::EBI.query('ensemblgenomesgene', code, 'raw', 'embl')
+def fetch_embl(code, db = 'ensemblgenomesgene', format = 'embl')
+  entry = Bio::Fetch::EBI.query(db, code, 'raw', format)
   return Bio::EMBL.new(entry)
 end
 
