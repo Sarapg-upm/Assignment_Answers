@@ -61,3 +61,9 @@ def get_info_gene_entry(entry)
   chromosone_number, entry_start, entry_end = entry.accession.match(/.*:\w+\d+:(\d+):(\d+):(\d+)/).captures
   return chromosone_number, entry_start.to_i, entry_end.to_i
 end
+
+def read_fasta(file)
+  fasta_file = Bio::FlatFile.auto(file)
+  return fasta_file
+end
+
