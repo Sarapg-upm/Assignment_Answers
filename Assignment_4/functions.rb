@@ -67,11 +67,7 @@ def read_fasta(file)
   return fasta_file
 end
 
-def set_blast_db(type_of_db, typye_of_blast, db, output_name , e)
-  
-  folder = "folder_#{output_name}"
-  system("makeblastdb -in #{db} -dbtype #{type_of_db} -hash_index -out #{folder}/#{output_name}")
-  local_blast_factory = Bio::Blast.local(typye_of_blast, "#{folder}/#{output_name}", "-e #{e}")
-  db_object = Bio::Blast::Fastacmd.new("#{folder}/#{output_name}")
-  return local_blast_factory, db_object
+def get_coverage(hit, report)
+  coverage = (hit.query_end.to_f + 1 - hit.query_start.to_f)/report.query_len.to_f
+  return coverage
 end
