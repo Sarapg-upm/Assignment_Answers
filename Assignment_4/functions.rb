@@ -62,11 +62,18 @@ def get_info_gene_entry(entry)
   return chromosone_number, entry_start.to_i, entry_end.to_i
 end
 
+# Function that reads a fasta file
+# @param file [String] path of the file
+# @return fasta_file A Bio::Fasta object
 def read_fasta(file)
   fasta_file = Bio::FlatFile.auto(file)
   return fasta_file
 end
 
+# Fuction that gets the percentage of coverage the homolog region
+# @param hit [Object] of Bio::Blast::Report::Hit
+# @param report [Object] of Bio::Blast::Report of the same hit
+# @return coverage as percentage
 def get_coverage(hit, report)
   coverage = (hit.query_end.to_f + 1 - hit.query_start.to_f)/report.query_len.to_f
   return coverage

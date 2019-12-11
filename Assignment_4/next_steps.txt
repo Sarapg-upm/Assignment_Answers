@@ -1,0 +1,12 @@
+Before talking abour the next steps for searching orthologs, I would like to point out that a better study could be performed if
+the two database to compare were have been of the same nature, nucleotides or aminoacids. When we do  the transcrtiption and
+translation of a nucleotides sequence is performed, at the end the same aminoacid sequence can be obtained, but when we have
+to change from an aminoacid sequence to a nucleotide, what codon would be the correct one? I think that a homogeneous data
+for such as complex theme could be a better starting of the problem.
+
+Next steps proposed would be:
+1. Generate an alignment file with clustalo and then a tree (in example, with iqtree) for studying the phylogenetics of the orhtologs
+2. This tree could be studied for example with the tool etetoolkit http://etetoolkit.org/ (sorry is python)
+3. We could also study the order of the gene in the genome for seeing if there is any conservation along the gene orther in species.
+4. Another step could be to search for networks of orthologos groups, which are groups of reciprocal best hits also name as clusters of orthologs groups.
+5. Searching in orthologs database like KEGG ortholog database, or orthobd.
